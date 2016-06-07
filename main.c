@@ -41,10 +41,9 @@ int main(void){
     }
 
     struct MESSAGE {
-        int package_type;
+        bool is_handsome;
         char name[100];
         int age;
-        bool is_handsome;
     };
     struct MESSAGE * message = (struct MESSAGE * )malloc(sizeof(struct MESSAGE)) ;
     printf("sizeof(struct MESSAGE) is %d \n",sizeof(struct MESSAGE));
@@ -53,7 +52,6 @@ int main(void){
     printf("sizeof(name) is %d \n",sizeof(message->name));
 
     memset(message,0, sizeof(struct MESSAGE));
-    message->package_type=1;
     strcpy(message->name,"咯肯loken");
     message->age=4;
     message->is_handsome = false;
